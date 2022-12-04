@@ -31,8 +31,10 @@ a {
   --black: #3b434e;
   --white: white;
   --primary: #7653fc;
+  --primary-hover: #573fb5;
   --red: #fc836d;
   --green: #1dc47e;
   --green-light: #c8f8e4;
+  --gray-light:#EBEBEB;
   --font-famali:font-family: "Noto Sans", sans-serif;
 }
