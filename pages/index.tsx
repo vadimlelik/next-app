@@ -1,5 +1,6 @@
 import Htag from "../components/Htag/Htag";
 import Button from "../components/Button/Button";
+import P from "../components/P/P";
 
 export default function Home(): JSX.Element {
   return (
@@ -7,14 +8,25 @@ export default function Home(): JSX.Element {
       <Htag tag="h1">Тут будет текс</Htag>
       <Htag tag="h2">Тут будет текс</Htag>
       <Htag tag="h3">Тут будет текс</Htag>
-      <Button
+      {/* <Button
         appearence="primary"
         onClick={() => console.log("Click in button")}
       >
         Button primary
+      </Button> */}
+      <Button appearence="primary" arrow="left">
+        Button primary
       </Button>
-      <Button appearence="primary">Button primary</Button>
-      <Button appearence="ghost">Button</Button>
+      <Button appearence="primary" arrow="left">
+        Button primary
+      </Button>
+      <Button appearence="ghost" arrow="left">
+        Button
+      </Button>
+
+      <P size="small"> small</P>
+      <P size="large"> large</P>
+      <P size="middle"> large</P>
     </div>
   );
 }
