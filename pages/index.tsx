@@ -4,20 +4,15 @@ import P from "../components/P/P";
 import Tag from "../components/Tag/Tag";
 import Rating from "../components/Rating/Rating";
 import { useState } from "react";
+import Layout from "../layout/Layout";
 
 export default function Home(): JSX.Element {
   const [raiting, setRaiting] = useState<number>(4);
   return (
-    <div>
+    <Layout>
       <Htag tag="h1">Тут будет текс</Htag>
       <Htag tag="h2">Тут будет текс</Htag>
       <Htag tag="h3">Тут будет текс</Htag>
-      {/* <Button
-        appearence="primary"
-        onClick={() => console.log("Click in button")}
-      >
-        Button primary
-      </Button> */}
       <Button appearence="primary" arrow="left">
         Button primary
       </Button>
@@ -41,6 +36,6 @@ export default function Home(): JSX.Element {
         tag
       </Tag>
       <Rating raiting={raiting} isEditable={true} setRaiting={setRaiting} />
-    </div>
+    </Layout>
   );
 }
