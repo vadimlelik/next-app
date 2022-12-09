@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import cn from "classnames";
 import styles from "./Layout.module.css";
 import { LayoutProps } from "./LayoutProps";
 import Header from "./Header/Header";
