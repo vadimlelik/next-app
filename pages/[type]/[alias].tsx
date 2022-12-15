@@ -31,6 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       menu.flatMap((s) => s.pages.map((p) => `/${m.route}/${p.alias}`))
     );
   }
+
   return {
     paths,
     fallback: true,
