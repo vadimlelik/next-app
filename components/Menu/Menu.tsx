@@ -12,6 +12,8 @@ const Menu = (): JSX.Element => {
   const { menu, setMenu, firstCategory } = useContext(AppContext);
   const router = useRouter();
 
+  console.log(firstCategory);
+
   const openSecondLeavel = (secondCategory: string) => {
     setMenu &&
       setMenu(
