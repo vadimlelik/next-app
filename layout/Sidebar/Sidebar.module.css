@@ -3,6 +3,7 @@
   align-items: center;
   gap: 20px;
 }
-.logo {
-  margin-top: 34px;
+.sidebar div ul {
+  margin: 0;
+  padding: 0;
 }

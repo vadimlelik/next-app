@@ -2,6 +2,7 @@ import Advantages from "../../components/Advantages/Advantages";
 import Card from "../../components/Card/Card";
 import HhData from "../../components/HhData/HhData";
 import Htag from "../../components/Htag/Htag";
+import P from "../../components/P/P";
 import Tag from "../../components/Tag/Tag";
 import { TopLevelCategory } from "../../interfaces/page.interface";
 import { TopPageComponentProps } from "./TopPage.component.props";
@@ -43,6 +44,14 @@ const TopPageComponents = ({
           <Advantages advantages={page.advantages} />
         </>
       )}
+
+      {page.seoText && <P size="small">{page.seoText}</P>}
+      <Htag tag="h2"> Получаемые навыки </Htag>
+      {page.tags.map((t) => (
+        <Tag key={t} color="primary">
+          {t}
+        </Tag>
+      ))}
     </div>
   );
 };

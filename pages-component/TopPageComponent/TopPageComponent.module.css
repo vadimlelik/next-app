@@ -5,11 +5,6 @@
   justify-items: left;
   gap: 20px;
 }
-.wrapper {
-  margin-top: 40px;
-}
-.product {
-}
 .hhTitle {
   display: grid;
   grid-template-columns: auto 1fr;
