@@ -1,7 +1,9 @@
+import Advantages from "../../components/Advantages/Advantages";
 import Card from "../../components/Card/Card";
 import HhData from "../../components/HhData/HhData";
 import Htag from "../../components/Htag/Htag";
 import Tag from "../../components/Tag/Tag";
+import { TopLevelCategory } from "../../interfaces/page.interface";
 import { TopPageComponentProps } from "./TopPage.component.props";
 import styles from "./TopPageComponent.module.css";
 
@@ -32,7 +34,15 @@ const TopPageComponents = ({
           </Tag>
         )}
       </div>
-      <HhData {...page.hh} />
+      {firstCategory === TopLevelCategory.Courses && page.hh && (
+        <HhData {...page.hh} />
+      )}
+      {page.advantages && page.advantages.length > 0 && (
+        <>
+          <Htag tag="h2"> Преимущества </Htag>
+          <Advantages advantages={page.advantages} />
+        </>
+      )}
     </div>
   );
 };
