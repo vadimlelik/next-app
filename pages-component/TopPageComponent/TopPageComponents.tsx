@@ -1,12 +1,13 @@
 import Advantages from "../../components/Advantages/Advantages";
-import Card from "../../components/Card/Card";
 import HhData from "../../components/HhData/HhData";
 import Htag from "../../components/Htag/Htag";
 import P from "../../components/P/P";
 import Tag from "../../components/Tag/Tag";
-import { TopLevelCategory } from "../../interfaces/page.interface";
-import { TopPageComponentProps } from "./TopPage.component.props";
+import {TopLevelCategory} from "../../interfaces/page.interface";
+import {TopPageComponentProps} from "./TopPage.component.props";
 import styles from "./TopPageComponent.module.css";
+import Sort from "../../components/Sort/Sort";
+import {SortEnum} from "../../components/Sort/SortProps";
 
 const TopPageComponents = ({
   page,
@@ -22,7 +23,9 @@ const TopPageComponents = ({
             {products.length}
           </Tag>
         )}
-        <span>Sorted</span>
+          {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+        <Sort sort={SortEnum.Rating} setSort={()=>{}}/>
+
       </div>
       <div className={styles.product}>
         {products && products.map((p) => <div key={p._id}>{p.title}</div>)}
