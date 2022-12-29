@@ -8,6 +8,7 @@ import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
+import Input from "../components/Input/Input";
 
 function Home({ menu, firstCategory }: HomeProps): JSX.Element {
   const [raiting, setRaiting] = useState<number>(4);
@@ -43,6 +44,7 @@ function Home({ menu, firstCategory }: HomeProps): JSX.Element {
         {menu.map((item) => (
           <li>{item._id.secondCategory} </li>
         ))}
+          <Input />
       </ul>
     </>
   );

@@ -17,7 +17,7 @@ const TopPageComponents = ({
                                firstCategory,
                            }: TopPageComponentProps): JSX.Element => {
 
-    const [{products: sortedProducts,sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating});
+    const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating});
 
 
     const setSort = (sort: SortEnum) => {
