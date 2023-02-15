@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { ProductProps } from "./ProductProps";
+import React, {useState} from "react";
+import {ProductProps} from "./ProductProps";
 import cn from "classnames";
 import styles from "./Product.module.css";
 import Card from "../Card/Card";
 import Rating from "../Rating/Rating";
 import Tag from "../Tag/Tag";
-import { declOfNum, priceRu } from "../../helpers/helpers";
+import {declOfNum, priceRu} from "../../helpers/helpers";
 import Review from "../Review/Review";
 
-const Product = ({
-    product,
-    className,
-    ...props
-}: ProductProps): JSX.Element => {
+const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
+
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+
     return (
         <>
             <Card className={cn(styles.product)}>
@@ -63,7 +61,7 @@ const Product = ({
                 })}
             >
                 {product.reviews.map((r) => (
-                    <Review key={r._id} review={r} />
+                    <Review key={r._id} review={r}/>
                 ))}
             </Card>
         </>

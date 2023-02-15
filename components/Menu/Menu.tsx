@@ -12,7 +12,7 @@ const Menu = (): JSX.Element => {
     const {menu, setMenu, firstCategory} = useContext(AppContext);
     const router = useRouter();
 
-    const openSecondLeavel = (secondCategory: string) => {
+    const openSecondLevel = (secondCategory: string) => {
         setMenu &&
         setMenu(
             menu.map((m) => {
@@ -62,7 +62,7 @@ const Menu = (): JSX.Element => {
                         <div key={m._id.secondCategory}>
                             <div
                                 className={styles.secondLevel}
-                                onClick={() => openSecondLeavel(m._id.secondCategory)}
+                                onClick={() => openSecondLevel(m._id.secondCategory)}
                             >
                                 {" "}
                                 {m._id.secondCategory}{" "}
